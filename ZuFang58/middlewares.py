@@ -6,7 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from TencentRecruit.settings import USER_AGENT_LIST
+from ZuFang58.settings import USER_AGENT_LIST
 import random
 
 # 随机请求头

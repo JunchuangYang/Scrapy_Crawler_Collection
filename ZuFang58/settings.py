@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for TencentRecruit project
+# Scrapy settings for ZuFang58 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'TencentRecruit'
+BOT_NAME = 'ZuFang58'
 
-SPIDER_MODULES = ['TencentRecruit.spiders']
-NEWSPIDER_MODULE = 'TencentRecruit.spiders'
+SPIDER_MODULES = ['ZuFang58.spiders']
+NEWSPIDER_MODULE = 'ZuFang58.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'TencentRecruit (+http://www.yourdomain.com)'
+#USER_AGENT = 'ZuFang58 (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -45,21 +45,21 @@ DEFAULT_REQUEST_HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    'Host': 'hr.tencent.com',
-    'Upgrade-Insecure-Requests': 1
+    'Upgrade-Insecure-Requests': 1,
+    'cookie': 'id58=c5/nn1sjCMxQD6/XS94PAg==; 58tj_uuid=0bdfbb6f-67b6-40ff-9fb6-df7ff52a727e; als=0; new_uv=1; utm_source=; spm=; init_refer=; wmda_uuid=301061c42066065ecc9033ddac248c75; wmda_new_uuid=1; wmda_session_id_2385390625025=1543471867301-a65be71e-4fee-41c2; wmda_visited_projects=%3B2385390625025; commontopbar_new_city_info=1%7C%E5%8C%97%E4%BA%AC%7Cbj; xxzl_deviceid=cjMctk5EJjUMjYLzSXpOooJ8hCrvKwuThkmfUviZQvBNT34JhpsSjW3VSRcpYGzV; new_session=0'
 }
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'TencentRecruit.middlewares.TencentrecruitSpiderMiddleware': 543,
+#    'ZuFang58.middlewares.TencentrecruitSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'TencentRecruit.middlewares.RandomUserAgentMiddleware': 543,
-    'TencentRecruit.middlewares.TencentrecruitDownloaderMiddleware': None
+    'ZuFang58.middlewares.RandomUserAgentMiddleware': 543,
+    'ZuFang58.middlewares.TencentrecruitDownloaderMiddleware': None
 }
 
 # Enable or disable extensions
@@ -71,7 +71,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'TencentRecruit.pipelines.TencentrecruitPipeline': 300,
+   'ZuFang58.pipelines.TencentrecruitPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,7 +92,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_ENABLED = True
 #HTTPCACHE_EXPIRATION_SECS = 0
 #HTTPCACHE_DIR = 'httpcache'
-#HTTPCACHE_IGNORE_HTTP_CODES = []
+HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 USER_AGENT_LIST=[
