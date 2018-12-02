@@ -6,18 +6,9 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from TencentRecruit.settings import USER_AGENT_LIST
-import random
 
-# 随机请求头
-class RandomUserAgentMiddleware(object):
-    #这个USER_AGENT_LIST是从settings里面导入的
-    def process_request(self,request,spider):
-        rand_use  = random.choice(USER_AGENT_LIST)
-        if rand_use:
-            request.headers.setdefault('User-Agent', rand_use)
 
-class TencentrecruitSpiderMiddleware(object):
+class JdBookSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -65,7 +56,7 @@ class TencentrecruitSpiderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class TencentrecruitDownloaderMiddleware(object):
+class JdBookDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
